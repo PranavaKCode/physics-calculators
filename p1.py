@@ -4,18 +4,7 @@ import streamlit as st
 st.set_page_config(page_title="Mowing Spiral Pole Radius Calculator", page_icon="")
 
 st.title("Mowing Spiral Pole Radius Calculator ")
-st.write(
-    """
-    This app computes the required radius of the central pole so that a lawnmower
-    attached by a rope winds around it in a spiral and the cut strips **just touch**
-    (no overlaps, no gaps).
 
-    Mathematically, the mower follows (approximately) an involute of a circle.
-    The distance between neighboring turns of this spiral equals the pole's
-    circumference, \(2\\pi R\). To cover the lawn perfectly, that distance must
-    equal the mower’s cutting width \(w\).
-    """
-)
 
 st.latex(r"w = 2\pi R \quad \Rightarrow \quad R = \frac{w}{2\pi}")
 
