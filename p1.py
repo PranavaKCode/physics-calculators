@@ -1,9 +1,9 @@
 import math
 import streamlit as st
 
-st.set_page_config(page_title="Mowing Spiral Pole Radius Calculator", page_icon="🌱")
+st.set_page_config(page_title="Mowing Spiral Pole Radius Calculator", page_icon="")
 
-st.title("Mowing Spiral Pole Radius Calculator 🌱")
+st.title("Mowing Spiral Pole Radius Calculator ")
 st.write(
     """
     This app computes the required radius of the central pole so that a lawnmower
@@ -56,4 +56,3 @@ st.info(
     f"to make the cut strips perfectly align."
 )
 
-st.caption("Neglecting rope thickness, as stated in the problem.")
