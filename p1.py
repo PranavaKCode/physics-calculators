@@ -19,11 +19,9 @@ cut_width_m = st.number_input(
     help="For this problem, w = 0.75 m."
 )
 
-# Compute radius
 radius_m = cut_width_m / (2 * math.pi)
 radius_cm = radius_m * 100.0
 
-# Format with 2 significant digits (for the cm answer)
 radius_cm_2sf = float(f"{radius_cm:.2g}")
 
 st.subheader("Result")
