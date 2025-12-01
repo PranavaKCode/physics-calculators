@@ -9,13 +9,10 @@ g = st.number_input("Gravity (m/s^2)", value=9.81)
 target_x = st.number_input("Target X distance (m)", value=8.0)
 target_y = st.number_input("Target Y height (m)", value=2.0)
 
-# Solve for required angle to hit (x, y)
 # Equation: y = x*tan(theta) - (g*x^2)/(2*v0^2*cos^2(theta))
-# Use identity 1/cos^2 = 1 + tan^2 to make it quadratic in tan(theta)
-
 a = - (g * target_x**2) / (2 * v0**2)
 b = target_x
-c = a - target_y  # Because we rewrite as a*tan^2 + b*tan + (a - y) = 0
+c = a - target_y  
 
 discriminant = b**2 - 4 * a * c
 
@@ -34,10 +31,8 @@ else:
     max_range = v0**2 / g
     st.info(f"Max theoretical range on flat ground: {max_range:.2f} m")
 
-# Slope Logic (for "Golf on a hill" type problems)
 slope_deg = st.number_input("Slope of hill (degrees)", value=0.0)
 if slope_deg != 0:
-    # Range on slope formula (conceptual note)
     # R = (2*v0^2 * cos(theta) * sin(theta - alpha)) / (g * cos^2(alpha))
     # Optimal theta = (pi/2 + alpha) / 2
     opt_angle = (90 + slope_deg) / 2
