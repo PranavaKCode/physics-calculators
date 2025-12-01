@@ -3,13 +3,10 @@ import streamlit as st
 
 st.set_page_config(page_title="Buoyancy & Fluids Toolkit", page_icon="🌊")
 
-st.title("🌊 Buoyancy & Fluids Toolkit")
+st.title(" Buoyancy & Fluids Toolkit")
 st.caption("Quick checks for float/sink, submerged fraction, added mass, and composite objects.")
 
 
-# --------------------------------------
-# Common inputs: fluid + gravity
-# --------------------------------------
 st.sidebar.header("Fluid & Gravity")
 
 fluid_preset = st.sidebar.selectbox(
@@ -37,9 +34,6 @@ mode = st.sidebar.radio(
 )
 
 
-# --------------------------------------
-# Helper functions
-# --------------------------------------
 def classify_buoyancy(rho_obj: float, rho_fluid: float) -> str:
     if rho_obj <= 0 or rho_fluid <= 0:
         return "invalid"
